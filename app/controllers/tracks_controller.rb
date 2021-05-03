@@ -13,14 +13,16 @@ class TracksController < ApplicationController
     if params[:artist_id].blank? == false
 
       if Artist.where(id: params[:artist_id]).exists? 
-        #array = []
+        array = []
         albums = Album.where(artist_id: params[:artist_id])
         albums.each do |album|
-          track = Track.where(album_id: album.id)
-          #array << track
+          tracks = Track.where(album_id: album.id)
+          tracks.each do |track|
+            track.save
+            array << track
+          end
         end
-        #arr = array.map
-        return render status: 200
+        return render json: array, status: 200
 
       #Artista no encontrado
       else
