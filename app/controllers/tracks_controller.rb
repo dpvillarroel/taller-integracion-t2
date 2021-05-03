@@ -96,13 +96,13 @@ class TracksController < ApplicationController
   end
 
   # PATCH/PUT /tracks/1
-  def update
-    if @track.update(params)
-      render json: @track
-    else
-      render json: @track.errors, status: :unprocessable_entity
-    end
-  end
+#  def update
+    #if @track.update(params)
+      #render json: @track
+    #else
+    #  render json: @track.errors, status: :unprocessable_entity
+   # end
+  #end
 
   #PLAY Reproduce cancion <track_id>
   def play
