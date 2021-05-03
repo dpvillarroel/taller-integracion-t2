@@ -55,13 +55,13 @@ class ArtistsController < ApplicationController
   end
 
   # PATCH/PUT /artists/1
-  def update
-    if @artist.update(params)
-      render json: @artist
-    else
-      render json: @artist.errors, status: :unprocessable_entity
-    end
-  end
+  #def update
+    #if @artist.update(params)
+     # render json: @artist
+   # else
+      #render json: @artist.errors, status: :unprocessable_entity
+  #  end
+  #end
 
   # ARTISTS#PLAY 
   #Reproduce todas las canciones de un artista <artist_id>
